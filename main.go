@@ -12,7 +12,6 @@ func serveWS(pool *webSocket.Pool, w http.ResponseWriter, r *http.Request) {
 
 	conn, err := webSocket.Upgrade(w, r)
 	if err != nil {
-		fmt.Println("Error in upgrade")
 		fmt.Fprintf(w, "%+v\n", err)
 	}
 
